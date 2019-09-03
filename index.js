@@ -70,7 +70,7 @@ function parse(lines) {
   const hierarchy = defineHierarchy(lines)
   let orders = returnOrdersArrayOfObjects(lines)
   const reversedOrders = [...orders].reverse()
-  reversedOrders.forEach((order, index) => {
+  reversedOrders.forEach(order => {
     if (order.hierarchy != hierarchy[0]) {
       let currIndex = hierarchy.indexOf(order.hierarchy)
       let lookingForIndex = null
